@@ -1,0 +1,17 @@
+[remote]
+node0 ansible_ssh_host=18.212.198.29
+node1 ansible_ssh_host=18.212.1.170
+node2 ansible_ssh_host=54.90.95.159
+node3 ansible_ssh_host=44.211.169.40
+node4 ansible_ssh_host=52.53.161.225
+node5 ansible_ssh_host=54.183.139.81
+node6 ansible_ssh_host=54.183.145.74
+node7 ansible_ssh_host=3.25.142.166
+node8 ansible_ssh_host=3.27.31.232
+node9 ansible_ssh_host=3.25.187.86
+node10 ansible_ssh_host=43.207.3.86
+node11 ansible_ssh_host=52.68.88.26
+node12 ansible_ssh_host=18.183.208.37
+node13 ansible_ssh_host=16.170.217.79
+node14 ansible_ssh_host=51.20.192.191
+node15 ansible_ssh_host=51.21.1.3

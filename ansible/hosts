@@ -1,0 +1,17 @@
+[remote]
+node0 ansible_ssh_host=0.0.0.0
+node1 ansible_ssh_host=0.0.0.0
+node2 ansible_ssh_host=0.0.0.0
+node3 ansible_ssh_host=0.0.0.0
+node4 ansible_ssh_host=0.0.0.0
+node5 ansible_ssh_host=0.0.0.0
+node6 ansible_ssh_host=0.0.0.0
+node7 ansible_ssh_host=0.0.0.0
+node8 ansible_ssh_host=0.0.0.0
+node9 ansible_ssh_host=0.0.0.0
+node10 ansible_ssh_host=0.0.0.0
+node11 ansible_ssh_host=0.0.0.0
+node12 ansible_ssh_host=0.0.0.0
+node13 ansible_ssh_host=0.0.0.0
+node14 ansible_ssh_host=0.0.0.0
+node15 ansible_ssh_host=0.0.0.0

@@ -1,0 +1,28 @@
+- hosts: remote
+  remote_user: ec2-user
+  gather_facts: False
+  tasks:
+    # - name: copy PlainDAG
+    #   copy:
+    #     src: /home/kuokhane/shareWithPC/code/go/PlainDAG-DSN/go-PlainDAG
+    #     dest: /home/ec2-user/testbed/PlainDAG/PlainDAG{{item}}/
+    #   loop: [0]
+    #   loop_control:
+    #     loop_var: item
+    #   ignore_errors: yes
+
+    # - name: chmod PlainDAG
+    #   shell: chmod +x /home/ec2-user/testbed/PlainDAG/PlainDAG{{item}}/go-PlainDAG
+    #   loop: [0]
+    #   loop_control:
+    #     loop_var: item
+    #   ignore_errors: yes
+
+    - name: copy configuration file
+      copy:
+        src: /home/kuokhane/shareWithPC/code/go/PlainDAG-DSN/benchmark/config/{{inventory_hostname}}_{{item}}.yaml
+        dest: /home/ec2-user/testbed/PlainDAG/PlainDAG{{item}}/config.yaml
+      loop: [0]
+      loop_control:
+        loop_var: item
+      ignore_errors: yes

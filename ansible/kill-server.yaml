@@ -1,0 +1,7 @@
+- hosts: remote
+  remote_user: kuokhane
+  gather_facts: true
+  tasks:
+    - name: kill go-PlainDAG
+      shell: killall go-PlainDAG
+      ignore_errors: yes

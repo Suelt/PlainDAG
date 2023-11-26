@@ -1,0 +1,20 @@
+- hosts: remote
+  remote_user: kuokhane
+  tasks:
+    # - name: create testbed dirs
+    #   file:
+    #     path: /home/kuokhane/testbed/PlainDAG{{inventory_hostname}}/PlainDAG{{item}}/testbed
+    #     state: directory
+    #   loop: [0, 1, 2]
+    #   loop_control:
+    #     loop_var: item
+    #   ignore_errors: yes
+
+    - name: run PlainDAG as a daemon
+      shell: "(nohup ./go-PlainDAG> /home/kuokhane/testbed/PlainDAG{{inventory_hostname}}/PlainDAG{{item}}/testbed/{{inventory_hostname}}_{{item}}.txt 2>&1 &)"
+      args:
+        chdir: /home/kuokhane/testbed/PlainDAG{{inventory_hostname}}/PlainDAG{{item}}
+      loop: [0, 1, 2]
+      loop_control:
+        loop_var: item
+      ignore_errors: yes

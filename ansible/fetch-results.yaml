@@ -1,0 +1,12 @@
+- hosts: remote
+  remote_user: kuokhane
+  tasks:
+    - name: fetch the results
+      fetch:
+        src: /home/kuokhane/testbed/PlainDAG{{inventory_hostname}}/PlainDAG{{item}}/testbed/{{inventory_hostname}}_{{item}}.txt
+        #The results will be fetched into the "result" folder from the remote hosts
+        dest: /home/kuokhane/shareWithPC/code/go/PlainDAG-DSN/ansible/result/{{inventory_hostname}}_{{item}}.txt
+      loop: [0, 1, 2]
+      loop_control:
+        loop_var: item
+      ignore_errors: yes

@@ -1,0 +1,8 @@
+
+.vscode
+
+*.log
+chaindata_*
+statedata_*
+go-PlainDAG
+go.sum
